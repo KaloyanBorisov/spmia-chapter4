@@ -22,7 +22,6 @@ public class LicenseService {
     @Autowired
     ServiceConfig config;
 
-
     @Autowired
     OrganizationFeignClient organizationFeignClient;
 
@@ -31,7 +30,6 @@ public class LicenseService {
 
     @Autowired
     OrganizationDiscoveryClient organizationDiscoveryClient;
-
 
     private Organization retrieveOrgInfo(String organizationId, String clientType){
         Organization organization = null;

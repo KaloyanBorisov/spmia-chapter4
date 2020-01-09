@@ -23,7 +23,8 @@ public class OrganizationDiscoveryClient {
         List<ServiceInstance> instances = discoveryClient.getInstances("organizationservice");
 
         if (instances.size()==0) return null;
-        String serviceUri = String.format("%s/v1/organizations/%s",instances.get(0).getUri().toString(), organizationId);
+        //String serviceUri = String.format("%s/v1/organizations/%s",instances.get(0).getUri().toString(), organizationId);
+        String serviceUri = String.format("%s/v1/organizations/%s","http://192.168.99.100:8086", organizationId);
     
         ResponseEntity< Organization > restExchange =
                 restTemplate.exchange(
